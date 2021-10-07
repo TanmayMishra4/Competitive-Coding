@@ -5,6 +5,9 @@ int main(){
     int N, f, i, j, count = 0;
     cin>>N;
     int mat[N][N];
+    int stride;
+    cout<<"enter the stride\n";
+    cin>>stride;
     cout<<"Input the matrix:\n";
     for(i=0;i<N;i++){
         for(j=0;j<N;j++){
@@ -21,8 +24,8 @@ int main(){
         }
     }
     int featureMap[N-f+1][N-f+1];
-    for(int convRow=0; convRow<N-f+1; convRow++){
-        for(int convColumn=0; convColumn<N-f+1; convColumn++){
+    for(int convRow=0; convRow<N-f+1; convRow+=stride){
+        for(int convColumn=0; convColumn<N-f+1; convColumn+=stride){
             int val = 0;
             for(i=0;i<f;i++){
                 for(j=0;j<f;j++){
