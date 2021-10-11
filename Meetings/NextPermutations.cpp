@@ -12,6 +12,10 @@ vector<int> nextPerm(vector<int> A){
             break;
         }
     }
+    if(i == -1){
+        sort(A.begin(), A.end());
+        return A;
+    }
     //insert the rest of the code
     int temp = A[currItem];
     A[currItem] = A[n-1];
@@ -22,7 +26,7 @@ vector<int> nextPerm(vector<int> A){
 }
 
 int main(){
-    vector<int> v{1, 2, 5, 4, 3};
+    vector<int> v{5, 4, 3, 2, 1};
     cout<<"\n";
     for(auto i : nextPerm(v)){
         cout << " "<< i << " ";
