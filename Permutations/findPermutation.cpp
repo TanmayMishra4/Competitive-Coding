@@ -2,7 +2,6 @@
 using namespace std;
 
 list<int> permute(vector<int>& V, string& str){
-    vector<int> ans;
     int i, n = V.size();
     list<int> l;
     list<int> res;
@@ -10,17 +9,17 @@ list<int> permute(vector<int>& V, string& str){
     sort(V.begin(), V.end());
 
     for(i=0;i<n;i++){
-        l.push_back(i);
+        l.push_back(V[i]);
     }
-
+    // for(int i : l) cout<<i<<" ";
     for(i=0;i<str.size();i++){
         //insert the code
         if(str[i] == '0'){
-            res.push_back(V[l.back()]);
+            res.push_back(l.back());
             l.pop_back();
         }
         else{
-            res.push_back(V[l.front()]);
+            res.push_back(l.front());
             l.pop_front();
         }
     }
