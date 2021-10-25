@@ -11,6 +11,14 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "macos-gcc-x64"
+        },
+        {
+            "name": "CPPDEFAULT",
+            "includePath": [
+                "${default}"
+            ],
+            "compilerPath": "/usr/bin/g++",// /usr/local/bin/g++
+            "intelliSenseMode": "macos-gcc-x64"
         }
     ],
     "version": 4
