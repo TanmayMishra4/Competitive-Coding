@@ -11,7 +11,6 @@ struct TreeNode{
     }
 };
 
-vector<string> A;
 
 void findRoute(TreeNode* root, int city, vector<string> &directions){
     /* complete the function to find route from root to city in terms of
